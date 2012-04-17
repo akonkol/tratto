@@ -1,1 +1,10 @@
-testing
+Tratto is a tiny framework I  built to issue commands to cisco 
+routers over ssh and telnet.  I used pexpect.
+
+Systems.py - Is a file that defines properties of different
+operating systems
+
+Connectivity.py - Is a file that defines connectivity objects
+such as Session.
+
+Driver.py -  Example usages of how to use Tratto.
