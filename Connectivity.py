@@ -1,6 +1,7 @@
 #/usr/bin/env python
 import pexpect
 import Systems 
+import re
 
 class SessionError(Exception):
 	pass
@@ -90,7 +91,9 @@ class Session:
 	def sendcommand(self,cmd): # sends command, returns list of results
 		if self.connected:
 			self.connection.sendline(cmd)
-			self.connection.expect(cmd)
+			escaped_cmd = re.escape(cmd)
+
+			self.connection.expect(escaped_cmd)
 			self.connection.expect(self.operatingsystem.PROMPTLINE)
 			#print "***", self, cmd + " yielded: *** "
 			if len(self.connection.after) > 0:
