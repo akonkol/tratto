@@ -92,13 +92,10 @@ class Session:
 			self.connection.sendline(cmd)
 			self.connection.expect(cmd)
 			self.connection.expect(self.operatingsystem.PROMPTLINE)
-			print "***", self, cmd + " yielded: *** "
+			#print "***", self, cmd + " yielded: *** "
 			if len(self.connection.after) > 0:
 				idx = self.connection.before.rfind("\r\n")
-				print self.connection.before[:idx]
 				self.connection.before = self.connection.before[:idx]
-			else:
-				print self.connection.before
 
 			return self.connection.before.strip()
 		else:
