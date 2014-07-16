@@ -22,7 +22,7 @@ class Session:
 	def __telnet_login__(self,connection_args):
 		self.connection = pexpect.spawn(connection_args,timeout=7) # spawns session
 		
-		i = self.connection.expect([r"(?i)(username|login)[\s:]+",pexpect.TIMEOUT,r"uthentication failed."]) #assigns int to match 
+		i = self.connection.expect([r"(?i)(username|login|password) [\s:]+",pexpect.TIMEOUT,r"uthentication failed."]) #assigns int to match 
 		if i==0: #matched username
 			self.connection.sendline(self.username)
 			i = self.connection.expect(r"(?i)password[\s:]+")
