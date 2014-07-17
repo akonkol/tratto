@@ -8,3 +8,9 @@ Connectivity.py - Is a file that defines connectivity objects
 such as Session.
 
 Driver.py -  Example usages of how to use Tratto.
+
+Examples - A Directory of real-world examples of tratto
+   l3toPTR.py - A script that connects to a Cisco IOS device
+                issues "sho ip int br" and generates dns names
+                for the given l3 interface.  This can be useful
+                to generate ptr records for traceroutes. 
