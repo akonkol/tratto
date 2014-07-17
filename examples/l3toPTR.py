@@ -1,4 +1,8 @@
 #!/usr/bin/python
+# connects to a cisco ios device, get ip int information and generates
+# information needed to create a ptr record
+# Andrew Konkol 2014
+
 import os,sys
 path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if not path in sys.path:
