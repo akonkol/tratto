@@ -62,6 +62,8 @@ if args['domainname']:
    domainname = args['domainname']
 else:
    domainname = session.sendcommand("show ip domain")
+   if len(domainname) < 1:
+	domainname= ""
 
 
 ip_ints = session.sendcommand("sho ip int br")
