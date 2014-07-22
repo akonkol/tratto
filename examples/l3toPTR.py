@@ -59,12 +59,14 @@ else:
    hostname = session.sendcommand("show run | i hostname")[9:]
 
 if args['domainname']:
-   domainname = args['domainname']
+   domainname = "." +  args['domainname']
 else:
-   domainname = session.sendcommand("show ip domain")
-   if len(domainname) < 1:
-	domainname= ""
+   found_domainname = session.sendcommand("show ip domain")
 
+   if found_domainname:
+      domainname = "." +  found_domainname
+   else:
+      domainname = ""
 
 ip_ints = session.sendcommand("sho ip int br")
 session.logout()
