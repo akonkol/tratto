@@ -1,14 +1,4 @@
 #!/usr/bin/python
-# connects to a cisco ios device, get ip int information and generates
-# information needed to create a ptr record
-# Andrew Konkol 2014
-
-import os,sys
-path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-if not path in sys.path:
-    sys.path.insert(1, path)
-del path
-
 import Systems
 import Connectivity
 import argparse
@@ -117,6 +107,7 @@ for line in ip_ints.split('\r\n'):
 	   dns_line = schema.replace('interface_name',prefix)
 	   dns_line = dns_line.replace('interface_number',clean_suffix)
 	   dns_line = dns_line.replace('hostname',hostname)
-	   print dns_line
+	   dns_line = dns_line.replace('ip_address',int_ip)
+	   print dns_line 
 	else:
-           print prefix + clean_suffix  + "." + hostname + "." + domainname + "," +  int_ip
+           print prefix + clean_suffix  + "." + hostname +  domainname + "," +  int_ip
