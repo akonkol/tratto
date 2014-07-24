@@ -29,7 +29,7 @@ args = vars(parser.parse_args())
 
 device = args['device']
 username = args['username']
-os_type = SystemsProfiles['IOS']
+os_type = SystemProfiles['IOS']
 
 if args['password']:
 	password = args['password']
