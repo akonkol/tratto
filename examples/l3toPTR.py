@@ -1,6 +1,6 @@
 #!/usr/bin/python
-import tratto.systems import *
-import tratto.connectivity import * 
+from tratto.systems import *
+from tratto.connectivity import * 
 
 import argparse
 import getpass
