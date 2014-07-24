@@ -4,8 +4,9 @@ from tratto.systems import *
 from tratto.connectivity import *
 
 #telnet to a cisco switch
-
 m = SystemProfiles['IOS']
+
+#change 23 for 22 and telnet for ssh for ssh enabled devices
 s = Session("192.168.1.1",23,"telnet",m)
 s.login("yourusername", "yourpassword")
 
