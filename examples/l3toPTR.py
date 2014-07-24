@@ -1,4 +1,9 @@
 #!/usr/bin/python
+
+import os
+parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.sys.path.insert(0,parentdir)
+
 from tratto.systems import *
 from tratto.connectivity import * 
 
