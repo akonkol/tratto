@@ -1,6 +1,7 @@
 #!/usr/bin/python
-import Systems
-import Connectivity
+import tratto.systems import *
+import tratto.connectivity import * 
+
 import argparse
 import getpass
 import re
@@ -23,7 +24,7 @@ args = vars(parser.parse_args())
 
 device = args['device']
 username = args['username']
-os_type = Systems.OperatingSystems['IOS']
+os_type = SystemsProfiles['IOS']
 
 if args['password']:
 	password = args['password']
@@ -40,7 +41,7 @@ else:
 
 
 
-session = Connectivity.Session(device,port,transport,os_type)
+session = Session(device,port,transport,os_type)
 session.login(username, password)
 
 if args['HOSTNAME']:
