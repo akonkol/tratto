@@ -20,7 +20,10 @@ tratto is now a somewhat proper module, so you can import it like:
 from tratto.systems import * etc...
 
 Systems.OperatingSystems has been replaced with tratto.systems.SystemProfiles
-.
+<<<<<<< HEAD
+###########################
+Tratto is a tiny framework from akonkol.
+I like it very much. So i thinks it is a good way to learn how to use script to maintain the Network.
 
 =======
 ##The modified is from my linux.
