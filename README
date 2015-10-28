@@ -20,3 +20,4 @@ tratto is now a somewhat proper module, so you can import it like:
 from tratto.systems import * etc...
 
 Systems.OperatingSystems has been replaced with tratto.systems.SystemProfiles
+##The modified is from my linux.
