@@ -62,4 +62,13 @@ OperatingSystems = {
 	}
 
 
+class HuaweiIOS(OperatingSystem):
+	'''Huawei ios'''
+	PROMPTLINE      = r'[-\w]+[>#]'
+	GET_CONFIG	='display current-configuration'
+	PAGINATES	=True
+	VERSION		='display version'
+	DISABLE_PAGINATION = 'terminal length 0'
+	ESCALATE_COMMAND='system'
+
 

@@ -3,7 +3,7 @@ import Connectivity
 import Systems
 #telnet to a cisco switch
 m = Systems.OperatingSystems['IOS']
-s = Connectivity.Session("173.10.251.253",23,"telnet",m)
+s = Connectivity.Session("host_ip_address",23,"telnet",m)
 s.login("admin", "passwords")
 f = open("interface.up.txt","r")
 
