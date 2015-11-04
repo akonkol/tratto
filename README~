@@ -20,21 +20,11 @@ tratto is now a somewhat proper module, so you can import it like:
 from tratto.systems import * etc...
 
 Systems.OperatingSystems has been replaced with tratto.systems.SystemProfiles
-
-================
-20151028
+<<<<<<< HEAD
+###########################
 Tratto is a tiny framework from akonkol.
 I like it very much. So i thinks it is a good way to learn how to use script to maintain the Network.
 
-================
-20151028
+=======
 ##The modified is from my linux.
-
-================
-20151029
-##Thinking how to avoid leak my passwork on GitHub when i want to use the same script to change.
-##Add a new class HuaweiIOS in System.py
-##Read the origin codes of tratto
-
-
-
+>>>>>>> origin/master
